@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demon X Earn — survey and signup offers demo website">
+  <title>Demon X Earn | Survey & Signup Offers</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#141c31; --panel2:#19243d; --text:#f4f7ff; --muted:#aebbd3; --accent:#8b5cf6; --accent2:#22d3ee; --line:#2b3856; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:radial-gradient(circle at top right,#20204b 0,#0b1020 42%); color:var(--text); }
+    a { color:inherit; }
+    .wrap { max-width:1000px; margin:auto; padding:18px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 0 24px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:900; font-size:1.15rem; letter-spacing:.3px; }
+    .logo { width:42px; height:42px; border-radius:14px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#080b16; font-weight:1000; }
+    .pill { border:1px solid var(--line); color:var(--muted); padding:7px 10px; border-radius:999px; font-size:.78rem; }
+    .hero { padding:28px 0 22px; }
+    .eyebrow { color:var(--accent2); text-transform:uppercase; font-size:.75rem; font-weight:800; letter-spacing:1.7px; }
+    h1 { font-size:clamp(2rem,7vw,3.5rem); line-height:1.05; margin:10px 0 14px; }
+    .gradient { background:linear-gradient(90deg,#c4b5fd,#67e8f9); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero p { color:var(--muted); max-width:650px; line-height:1.65; margin:0; }
+    .notice { margin:18px 0 26px; padding:13px 15px; border:1px solid #7357b8; background:#201a3a; border-radius:14px; color:#e7ddff; font-size:.9rem; line-height:1.5; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:12px; margin:26px 0 14px; }
+    h2 { margin:0; font-size:1.35rem; }
+    .section-head small { color:var(--muted); }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:15px; }
+    .filter { background:var(--panel); border:1px solid var(--line); color:var(--text); border-radius:999px; padding:8px 13px; cursor:pointer; }
+    .filter.active { background:var(--accent); border-color:var(--accent); color:white; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
+    .card { background:linear-gradient(180deg,var(--panel2),var(--panel)); border:1px solid var(--line); border-radius:18px; padding:17px; display:flex; flex-direction:column; min-height:230px; }
+    .card-top { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+    .icon { width:43px; height:43px; display:grid; place-items:center; border-radius:13px; background:#29214c; font-size:1.35rem; }
+    .tag { font-size:.72rem; color:#a5f3fc; background:#113441; padding:5px 8px; border-radius:999px; }
+    .card h3 { margin:14px 0 7px; font-size:1.04rem; }
+    .card p { color:var(--muted); font-size:.88rem; line-height:1.5; margin:0 0 14px; }
+    .card .btn { margin-top:auto; }
+    .btn { display:inline-flex; justify-content:center; align-items:center; text-decoration:none; border:0; border-radius:11px; padding:11px 13px; font-weight:800; background:linear-gradient(90deg,var(--accent),#6d7cff); color:white; cursor:pointer; }
+    .btn.secondary { background:var(--panel2); border:1px solid var(--line); }
+    .how { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:12px 0 28px; }
+    .step { border:1px solid var(--line); border-radius:15px; padding:15px; background:#10182b; }
+    .step b { display:block; margin-bottom:7px; }
+    .step p { color:var(--muted); font-size:.88rem; line-height:1.5; margin:0; }
+    footer { border-top:1px solid var(--line); padding:22px 0 10px; color:var(--muted); font-size:.82rem; line-height:1.6; }
+    footer a { color:#c4b5fd; }
+    .footer-links { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
+    .hidden { display:none; }
+    @media (max-width:760px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .how { grid-template-columns:1fr; } }
+    @media (max-width:480px) { .wrap { padding:14px; } header { align-items:flex-start; } .pill { max-width:125px; text-align:center; } .grid { grid-template-columns:1fr; } .card { min-height:205px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><div class="logo">DX</div><span>DEMON X <span class="gradient">EARN</span></span></div>
+      <div class="pill">SURVEY • SIGN-UP OFFERS</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Your offers hub</div>
+        <h1>Discover offers.<br><span class="gradient">Earn by completing tasks.</span></h1>
+        <p>Survey aur signup offers ek jagah explore karo. Har offer ki eligibility, privacy policy aur payout rules pehle check karo.</p>
+      </section>
+
+      <div class="notice">
+        <strong>Demo website:</strong> Ye sample cards abhi real earning offers nahi hain. Live karne se pehle approved affiliate network se mile hue official tracking links lagao. Koi earning guaranteed nahi hai.
+      </div>
+
+      <div class="section-head">
+        <h2>Available offers</h2>
+        <small id="count">3 demo offers</small>
+      </div>
+
+      <div class="filters" aria-label="Filter offers">
+        <button class="filter active" data-filter="all">All offers</button>
+        <button class="filter" data-filter="survey">Surveys</button>
+        <button class="filter" data-filter="signup">Sign-up</button>
+      </div>
+
+      <section class="grid" id="offers">
+        <article class="card" data-kind="survey">
+          <div class="card-top"><div class="icon">📝</div><span class="tag">Survey</span></div>
+          <h3>Sample Opinion Survey</h3>
+          <p>Demo card. Actual survey availability and reward depend on your country and eligibility.</p>
+          <a class="btn offer-link" href="#" data-offer="Sample Opinion Survey">View offer</a>
+        </article>
+        <article class="card" data-kind="signup">
+          <div class="card-top"><div class="icon">📩</div><span class="tag">Sign-up</span></div>
+          <h3>Sample Newsletter Sign-up</h3>
+          <p>Demo card. Only use official, approved links and explain any data collection clearly.</p>
+          <a class="btn offer-link" href="#" data-offer="Sample Newsletter Sign-up">View offer</a>
+        </article>
+        <article class="card" data-kind="survey">
+          <div class="card-top"><div class="icon">📊</div><span class="tag">Survey</span></div>
+          <h3>Sample Product Feedback</h3>
+          <p>Demo card. Some surveys may screen you out; rewards are subject to the provider’s rules.</p>
+          <a class="btn offer-link" href="#" data-offer="Sample Product Feedback">View offer</a>
+        </article>
+      </section>
+
+      <section>
+        <div class="section-head"><h2>How it works</h2></div>
+        <div class="how">
+          <div class="step"><b>1. Choose an offer</b><p>Read the requirements and check whether the offer is available in your country.</p></div>
+          <div class="step"><b>2. Complete it honestly</b><p>Use the official link. Never use fake accounts, bots, or misleading information.</p></div>
+          <div class="step"><b>3. Wait for approval</b><p>The affiliate network confirms eligible actions and handles commission and payout under its terms.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="#privacy" id="privacyLink">Privacy note</a>
+        <a href="#terms" id="termsLink">Terms</a>
+        <a href="mailto:hello@example.com">Contact (replace this email)</a>
+      </div>
+      <div id="privacy"><strong>Privacy note:</strong> This demo does not collect or store personal information. Before publishing, add a real privacy policy that describes all analytics, cookies, and third-party tracking you actually use.</div>
+      <p id="terms"><strong>Terms:</strong> Demon X Earn is a demo offer listing page, not a payment provider. Offers, eligibility, rewards, and payouts are controlled by the respective providers. Do not promise guaranteed earnings. Replace demo cards and links only with offers you are approved to promote.</p>
+      <p>© <span id="year"></span> Demon X Earn</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const filters = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.card');
+    const count = document.getElementById('count');
+
+    filters.forEach(button => {
+      button.addEventListener('click', () => {
+        filters.forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.dataset.filter;
+        let visible = 0;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.kind === filter;
+          card.classList.toggle('hidden', !show);
+          if (show) visible++;
+        });
+        count.textContent = `${visible} demo offer${visible === 1 ? '' : 's'}`;
+      });
+    });
+
+    document.querySelectorAll('.offer-link').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        alert('This is a demo offer. After an affiliate network approves you, replace this button with its official tracking link.');
+      });
+    });
+  </script>
+</body>
+</html>
