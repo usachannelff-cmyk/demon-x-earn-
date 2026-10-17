@@ -1,153 +1,63 @@
 <!doctype html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Demon X Earn — survey and signup offers demo website">
-  <title>Demon X Earn | Survey & Signup Offers</title>
-  <style>
-    :root { --bg:#0b1020; --panel:#141c31; --panel2:#19243d; --text:#f4f7ff; --muted:#aebbd3; --accent:#8b5cf6; --accent2:#22d3ee; --line:#2b3856; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:radial-gradient(circle at top right,#20204b 0,#0b1020 42%); color:var(--text); }
-    a { color:inherit; }
-    .wrap { max-width:1000px; margin:auto; padding:18px; }
-    header { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 0 24px; }
-    .brand { display:flex; align-items:center; gap:10px; font-weight:900; font-size:1.15rem; letter-spacing:.3px; }
-    .logo { width:42px; height:42px; border-radius:14px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#080b16; font-weight:1000; }
-    .pill { border:1px solid var(--line); color:var(--muted); padding:7px 10px; border-radius:999px; font-size:.78rem; }
-    .hero { padding:28px 0 22px; }
-    .eyebrow { color:var(--accent2); text-transform:uppercase; font-size:.75rem; font-weight:800; letter-spacing:1.7px; }
-    h1 { font-size:clamp(2rem,7vw,3.5rem); line-height:1.05; margin:10px 0 14px; }
-    .gradient { background:linear-gradient(90deg,#c4b5fd,#67e8f9); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    .hero p { color:var(--muted); max-width:650px; line-height:1.65; margin:0; }
-    .notice { margin:18px 0 26px; padding:13px 15px; border:1px solid #7357b8; background:#201a3a; border-radius:14px; color:#e7ddff; font-size:.9rem; line-height:1.5; }
-    .section-head { display:flex; align-items:end; justify-content:space-between; gap:12px; margin:26px 0 14px; }
-    h2 { margin:0; font-size:1.35rem; }
-    .section-head small { color:var(--muted); }
-    .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:15px; }
-    .filter { background:var(--panel); border:1px solid var(--line); color:var(--text); border-radius:999px; padding:8px 13px; cursor:pointer; }
-    .filter.active { background:var(--accent); border-color:var(--accent); color:white; }
-    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
-    .card { background:linear-gradient(180deg,var(--panel2),var(--panel)); border:1px solid var(--line); border-radius:18px; padding:17px; display:flex; flex-direction:column; min-height:230px; }
-    .card-top { display:flex; align-items:center; justify-content:space-between; gap:8px; }
-    .icon { width:43px; height:43px; display:grid; place-items:center; border-radius:13px; background:#29214c; font-size:1.35rem; }
-    .tag { font-size:.72rem; color:#a5f3fc; background:#113441; padding:5px 8px; border-radius:999px; }
-    .card h3 { margin:14px 0 7px; font-size:1.04rem; }
-    .card p { color:var(--muted); font-size:.88rem; line-height:1.5; margin:0 0 14px; }
-    .card .btn { margin-top:auto; }
-    .btn { display:inline-flex; justify-content:center; align-items:center; text-decoration:none; border:0; border-radius:11px; padding:11px 13px; font-weight:800; background:linear-gradient(90deg,var(--accent),#6d7cff); color:white; cursor:pointer; }
-    .btn.secondary { background:var(--panel2); border:1px solid var(--line); }
-    .how { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:12px 0 28px; }
-    .step { border:1px solid var(--line); border-radius:15px; padding:15px; background:#10182b; }
-    .step b { display:block; margin-bottom:7px; }
-    .step p { color:var(--muted); font-size:.88rem; line-height:1.5; margin:0; }
-    footer { border-top:1px solid var(--line); padding:22px 0 10px; color:var(--muted); font-size:.82rem; line-height:1.6; }
-    footer a { color:#c4b5fd; }
-    .footer-links { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
-    .hidden { display:none; }
-    @media (max-width:760px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .how { grid-template-columns:1fr; } }
-    @media (max-width:480px) { .wrap { padding:14px; } header { align-items:flex-start; } .pill { max-width:125px; text-align:center; } .grid { grid-template-columns:1fr; } .card { min-height:205px; } }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demon X Earn — V3 Demo</title>
+<style>
+:root{--bg:#090d1d;--panel:#121a30;--line:#2a3655;--text:#f4f6ff;--muted:#aab5cc;--purple:#8262ff;--green:#24d69b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#0d1325ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-size:20px;font-weight:900;letter-spacing:.3px}.brand span{color:#a894ff}.pill{font-size:12px;color:#b8f9e4;border:1px solid #236e5b;border-radius:99px;padding:4px 9px}
+nav{display:flex;gap:7px;overflow:auto;padding:12px 14px;border-bottom:1px solid var(--line)}button,.btn{border:0;border-radius:12px;background:var(--purple);color:white;font-weight:750;padding:11px 14px;cursor:pointer;text-decoration:none;display:inline-block}button.secondary{background:#202a45;border:1px solid var(--line)}button.danger{background:#813c55}nav button{white-space:nowrap;padding:9px 12px}
+main{max-width:960px;margin:0 auto;padding:20px 16px 60px}.hero{padding:25px 20px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,#171b3b,#111a30 70%);margin:8px 0 22px}.hero h1{font-size:clamp(28px,6vw,44px);line-height:1.08;margin:0 0 12px}.hero p,.muted{color:var(--muted)}.hero .btn{margin-top:8px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px}.card h3{margin:0 0 8px}.tag{display:inline-block;color:#c8bcff;background:#29214b;padding:4px 8px;border-radius:8px;font-size:12px;margin-bottom:9px}.amount{font-size:23px;font-weight:850;color:var(--green)}.row{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.field{display:block;margin:12px 0}.field label{display:block;color:var(--muted);font-size:14px;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0b1121;color:var(--text);font:inherit}.field textarea{min-height:76px}.notice{padding:13px 15px;border-radius:12px;border:1px solid #65552b;background:#2a2414;color:#ffe9ae;margin:14px 0}.success{border-color:#236e5b;background:#102b28;color:#b8f9e4}.hidden{display:none!important}.small{font-size:13px;color:var(--muted)}.offer-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}footer{border-top:1px solid var(--line);padding:22px 16px;color:var(--muted);text-align:center;font-size:13px}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand"><div class="logo">DX</div><span>DEMON X <span class="gradient">EARN</span></span></div>
-      <div class="pill">SURVEY • SIGN-UP OFFERS</div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="eyebrow">Your offers hub</div>
-        <h1>Discover offers.<br><span class="gradient">Earn by completing tasks.</span></h1>
-        <p>Survey aur signup offers ek jagah explore karo. Har offer ki eligibility, privacy policy aur payout rules pehle check karo.</p>
-      </section>
-
-      <div class="notice">
-        <strong>Demo website:</strong> Ye sample cards abhi real earning offers nahi hain. Live karne se pehle approved affiliate network se mile hue official tracking links lagao. Koi earning guaranteed nahi hai.
-      </div>
-
-      <div class="section-head">
-        <h2>Available offers</h2>
-        <small id="count">3 demo offers</small>
-      </div>
-
-      <div class="filters" aria-label="Filter offers">
-        <button class="filter active" data-filter="all">All offers</button>
-        <button class="filter" data-filter="survey">Surveys</button>
-        <button class="filter" data-filter="signup">Sign-up</button>
-      </div>
-
-      <section class="grid" id="offers">
-        <article class="card" data-kind="survey">
-          <div class="card-top"><div class="icon">📝</div><span class="tag">Survey</span></div>
-          <h3>Sample Opinion Survey</h3>
-          <p>Demo card. Actual survey availability and reward depend on your country and eligibility.</p>
-          <a class="btn offer-link" href="#" data-offer="Sample Opinion Survey">View offer</a>
-        </article>
-        <article class="card" data-kind="signup">
-          <div class="card-top"><div class="icon">📩</div><span class="tag">Sign-up</span></div>
-          <h3>Sample Newsletter Sign-up</h3>
-          <p>Demo card. Only use official, approved links and explain any data collection clearly.</p>
-          <a class="btn offer-link" href="#" data-offer="Sample Newsletter Sign-up">View offer</a>
-        </article>
-        <article class="card" data-kind="survey">
-          <div class="card-top"><div class="icon">📊</div><span class="tag">Survey</span></div>
-          <h3>Sample Product Feedback</h3>
-          <p>Demo card. Some surveys may screen you out; rewards are subject to the provider’s rules.</p>
-          <a class="btn offer-link" href="#" data-offer="Sample Product Feedback">View offer</a>
-        </article>
-      </section>
-
-      <section>
-        <div class="section-head"><h2>How it works</h2></div>
-        <div class="how">
-          <div class="step"><b>1. Choose an offer</b><p>Read the requirements and check whether the offer is available in your country.</p></div>
-          <div class="step"><b>2. Complete it honestly</b><p>Use the official link. Never use fake accounts, bots, or misleading information.</p></div>
-          <div class="step"><b>3. Wait for approval</b><p>The affiliate network confirms eligible actions and handles commission and payout under its terms.</p></div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-links">
-        <a href="#privacy" id="privacyLink">Privacy note</a>
-        <a href="#terms" id="termsLink">Terms</a>
-        <a href="mailto:hello@example.com">Contact (replace this email)</a>
-      </div>
-      <div id="privacy"><strong>Privacy note:</strong> This demo does not collect or store personal information. Before publishing, add a real privacy policy that describes all analytics, cookies, and third-party tracking you actually use.</div>
-      <p id="terms"><strong>Terms:</strong> Demon X Earn is a demo offer listing page, not a payment provider. Offers, eligibility, rewards, and payouts are controlled by the respective providers. Do not promise guaranteed earnings. Replace demo cards and links only with offers you are approved to promote.</p>
-      <p>© <span id="year"></span> Demon X Earn</p>
-    </footer>
-  </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const filters = document.querySelectorAll('.filter');
-    const cards = document.querySelectorAll('.card');
-    const count = document.getElementById('count');
-
-    filters.forEach(button => {
-      button.addEventListener('click', () => {
-        filters.forEach(b => b.classList.remove('active'));
-        button.classList.add('active');
-        const filter = button.dataset.filter;
-        let visible = 0;
-        cards.forEach(card => {
-          const show = filter === 'all' || card.dataset.kind === filter;
-          card.classList.toggle('hidden', !show);
-          if (show) visible++;
-        });
-        count.textContent = `${visible} demo offer${visible === 1 ? '' : 's'}`;
-      });
-    });
-
-    document.querySelectorAll('.offer-link').forEach(link => {
-      link.addEventListener('click', event => {
-        event.preventDefault();
-        alert('This is a demo offer. After an affiliate network approves you, replace this button with its official tracking link.');
-      });
-    });
-  </script>
-</body>
-</html>
+<header><div class="brand">👿 DEMON <span>X EARN</span></div><span class="pill">V3 • DEMO MODE</span></header>
+<nav>
+<button data-page="home">Home</button><button data-page="offers">Offers</button><button data-page="dashboard">Dashboard</button><button data-page="auth">Login / Signup</button><button data-page="admin">Admin Panel</button>
+</nav>
+<main>
+<section id="home" class="page">
+<div class="hero"><span class="tag">SURVEYS • SIGNUP OFFERS</span><h1>Earn smart.<br><span style="color:#a894ff">Stay honest.</span></h1><p>Browse offer examples, read each provider's rules, and complete eligible actions honestly. This is a front-end demo; no real payouts or affiliate tracking are enabled.</p><button data-go="offers">Explore offers →</button></div>
+<h2>How it works</h2><div class="grid">
+<div class="card"><h3>1. Choose an offer</h3><p class="muted">Read eligibility, country availability and the official offer requirements.</p></div>
+<div class="card"><h3>2. Complete it honestly</h3><p class="muted">Use the provider's official link. Never use fake accounts, bots or misleading details.</p></div>
+<div class="card"><h3>3. Wait for approval</h3><p class="muted">The affiliate network confirms eligible actions and determines commission under its terms.</p></div>
+</div>
+<div class="notice">Demo notice: the sample offers below are placeholders. They do not pay money. Add only approved affiliate links and disclose that you may earn commission.</div>
+</section>
+<section id="offers" class="page hidden"><div class="row"><div><h1>Available Offers</h1><p class="muted">Sample listings • real offers need approved affiliate URLs.</p></div><button class="secondary" data-go="admin">Manage offers</button></div><div id="offerList" class="grid"></div></section>
+<section id="dashboard" class="page hidden"><h1>Your Dashboard</h1><p class="muted">Demo dashboard overview.</p><div class="grid"><div class="card"><div class="muted">Offers listed</div><div class="amount" id="dashOffers">0</div></div><div class="card"><div class="muted">Demo completed actions</div><div class="amount" id="dashDone">0</div></div><div class="card"><div class="muted">Real balance</div><div class="amount">₹0.00</div><div class="small">No real tracking or payments connected.</div></div></div><div class="card"><h3>Demo activity</h3><p id="activity" class="muted">No demo actions yet.</p><button class="secondary" id="resetDemo">Reset demo activity</button></div></section>
+<section id="auth" class="page hidden"><h1>Login / Signup</h1><div class="notice">This prototype does not create accounts and does not collect or save passwords. Real authentication needs a secure backend and privacy policy.</div><div class="grid"><form class="card" id="loginForm"><h3>Login preview</h3><div class="field"><label>Email (preview only)</label><input type="email" placeholder="you@example.com" required></div><div class="field"><label>Password</label><input type="password" placeholder="Not sent or saved" required></div><button>Preview login</button><p class="small" id="loginMsg"></p></form><form class="card" id="signupForm"><h3>Create account preview</h3><div class="field"><label>Display name</label><input required placeholder="Your display name"></div><div class="field"><label>Email (preview only)</label><input type="email" required placeholder="you@example.com"></div><div class="field"><label>Password</label><input type="password" required minlength="8" placeholder="Not sent or saved"></div><button>Preview signup</button><p class="small" id="signupMsg"></p></form></div></section>
+<section id="admin" class="page hidden"><h1>Admin Panel</h1><p class="muted">Add/edit demo offer cards on this device. This is not a secure, online admin system.</p><div class="notice">Important: because this is a static GitHub Pages site, anyone can inspect the code. Do not put private admin passwords, API keys, payment details, or personal data here.</div>
+<form id="offerForm" class="card"><h3 id="formTitle">Add a new offer</h3><input type="hidden" id="editId"><div class="field"><label>Offer title</label><input id="title" required placeholder="e.g. Sample survey"></div><div class="field"><label>Offer type</label><select id="type"><option>Survey</option><option>Signup</option><option>App install</option><option>Other</option></select></div><div class="field"><label>Reward text (display only)</label><input id="reward" required placeholder="e.g. Provider reward varies"></div><div class="field"><label>Country availability</label><input id="country" required placeholder="e.g. Check provider rules"></div><div class="field"><label>Official affiliate URL (optional)</label><input id="url" type="url" placeholder="https://..."></div><div class="field"><label>Short requirements</label><textarea id="requirements" placeholder="Explain requirements honestly"></textarea></div><button id="saveOffer">Save offer</button> <button type="button" class="secondary" id="cancelEdit">Cancel</button></form><h2>Manage listings</h2><div id="adminList"></div><button class="danger" id="restoreOffers">Restore sample offers</button></section>
+</main>
+<footer>© Demon X Earn • Demo only • Add a real Privacy Policy, Terms, Contact details and affiliate disclosure before launch.</footer>
+<script>
+const defaults=[
+{id:1,title:"Sample Survey",type:"Survey",reward:"Reward set by provider",country:"Check provider rules",url:"",requirements:"Complete the survey truthfully. Eligibility and approval depend on the provider."},
+{id:2,title:"Sample Signup Offer",type:"Signup",reward:"Commission varies",country:"Check provider rules",url:"",requirements:"Read the terms first. Only use genuine details and one permitted account."},
+{id:3,title:"Sample App Offer",type:"App install",reward:"Reward set by provider",country:"Check provider rules",url:"",requirements:"Install only from the official provider/store link and follow its rules."}
+];
+const $=id=>document.getElementById(id);
+let offers=loadOffers(),done=Number(localStorage.getItem("dx_done")||0);
+function loadOffers(){try{const x=JSON.parse(localStorage.getItem("dx_offers"));return Array.isArray(x)?x:defaults.slice()}catch{return defaults.slice()}}
+function persist(){localStorage.setItem("dx_offers",JSON.stringify(offers))}
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function show(page){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("hidden",p.id!==page));if(page==="offers")renderOffers();if(page==="admin")renderAdmin();if(page==="dashboard")renderDash();window.scrollTo(0,0)}
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.page)));
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.go)));
+function renderOffers(){$("offerList").innerHTML=offers.map(o=>`<article class="card"><span class="tag">${safe(o.type)}</span><h3>${safe(o.title)}</h3><div class="amount">${safe(o.reward)}</div><p class="muted">${safe(o.requirements||"Check the provider's terms.")}</p><p class="small">Availability: ${safe(o.country)}</p><div class="offer-actions">${o.url?`<a class="btn" href="${safe(o.url)}" target="_blank" rel="noopener noreferrer" data-open="${o.id}">Open official link ↗</a>`:'<button class="secondary" disabled>No link added</button>'}<button class="secondary" data-complete="${o.id}">Mark demo action</button></div></article>`).join("")||'<p class="muted">No offers added yet.</p>';document.querySelectorAll("[data-complete]").forEach(b=>b.onclick=()=>{done++;localStorage.setItem("dx_done",done);renderOffers();alert("Demo action recorded only. No provider conversion or payment occurred.")});document.querySelectorAll("[data-open]").forEach(a=>a.addEventListener("click",()=>{done++;localStorage.setItem("dx_done",done)}))}
+function renderDash(){$("dashOffers").textContent=offers.length;$("dashDone").textContent=done;$("activity").textContent=done?`${done} demo action(s) recorded on this device. These are not verified conversions.`:"No demo actions yet."}
+function renderAdmin(){$("adminList").innerHTML=offers.map(o=>`<div class="card"><div class="row"><div><h3>${safe(o.title)}</h3><p class="small">${safe(o.type)} • ${safe(o.reward)}</p></div><div><button class="secondary" data-edit="${o.id}">Edit</button> <button class="danger" data-delete="${o.id}">Delete</button></div></div></div>`).join("")||'<p class="muted">No offers yet.</p>';document.querySelectorAll("[data-edit]").forEach(b=>b.onclick=()=>editOffer(Number(b.dataset.edit)));document.querySelectorAll("[data-delete]").forEach(b=>b.onclick=()=>{if(confirm("Delete this demo offer?")){offers=offers.filter(o=>o.id!==Number(b.dataset.delete));persist();renderAdmin()}})}
+$("offerForm").addEventListener("submit",e=>{e.preventDefault();const id=Number($("editId").value);const o={id:id||Date.now(),title:$("title").value.trim(),type:$("type").value,reward:$("reward").value.trim(),country:$("country").value.trim(),url:$("url").value.trim(),requirements:$("requirements").value.trim()};if(o.url&&!/^https?:\/\//i.test(o.url)){alert("Use an official https:// or http:// link.");return}if(id)offers=offers.map(x=>x.id===id?o:x);else offers.unshift(o);persist();e.target.reset();$("editId").value="";$("formTitle").textContent="Add a new offer";renderAdmin();alert("Offer saved on this device only. It will not automatically update the live site for other visitors.")});
+function editOffer(id){const o=offers.find(x=>x.id===id);if(!o)return;$("editId").value=o.id;$("title").value=o.title;$("type").value=o.type;$("reward").value=o.reward;$("country").value=o.country;$("url").value=o.url||"";$("requirements").value=o.requirements||"";$("formTitle").textContent="Edit offer";window.scrollTo(0,0)}
+$("cancelEdit").onclick=()=>{$("offerForm").reset();$("editId").value="";$("formTitle").textContent="Add a new offer"};
+$("restoreOffers").onclick=()=>{if(confirm("Restore the three sample offers?")){offers=defaults.slice();persist();renderAdmin()}};
+$("loginForm").onsubmit=e=>{e.preventDefault();$("loginMsg").textContent="Preview only: no login happened and no data was sent or saved.";e.target.reset()};
+$("signupForm").onsubmit=e=>{e.preventDefault();$("signupMsg").textContent="Preview only: no account was created and no data was sent or saved.";e.target.reset()};
+$("resetDemo").onclick=()=>{done=0;localStorage.setItem("dx_done","0");renderDash()};
+renderOffers();
+</script>
+</body></html>
